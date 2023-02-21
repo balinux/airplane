@@ -111,7 +111,7 @@ class BonusPage extends StatelessWidget {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(defaultRadius))),
           onPressed: () {
-            // Navigator.pushNamed(context, '/bonus');
+            Navigator.pushNamed(context, '/main');
           },
           child: Text(
             'Start Fly Now',
