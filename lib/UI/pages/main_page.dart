@@ -1,3 +1,4 @@
+import 'package:airplane/UI/pages/home-page.dart';
 import 'package:airplane/UI/widgets/custom_bottom_navigation_item.dart';
 import 'package:airplane/shared/theme.dart';
 import 'package:flutter/material.dart';
@@ -40,10 +41,13 @@ class MainPage extends StatelessWidget {
       );
     }
 
+    Widget buildContent() {
+      return HomePage();
+    }
+
     return Scaffold(
       backgroundColor: kBackgroundColor,
-      body:
-          Stack(children: [const Text('main page'), customButtonNavigation()]),
+      body: Stack(children: [buildContent(), customButtonNavigation()]),
     );
   }
 }
