@@ -92,6 +92,34 @@ class DetailPage extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+
+          // NOTE: Description
+          Container(
+            width: double.infinity,
+            margin: const EdgeInsets.only(top: 30),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+            decoration: BoxDecoration(
+                color: kWhiteColor, borderRadius: BorderRadius.circular(18)),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Note : About
+                Text(
+                  'About',
+                  style: blackTextStyle.copyWith(
+                      fontSize: 16, fontWeight: semiBold),
+                ),
+                const SizedBox(
+                  height: 6,
+                ),
+                Text(
+                  'Berada di jalur jalan provinsi yang menghubungkan Denpasar\nSingaraja serta letaknya yang dekat dengan Kebun Raya Eka Karya menjadikan tempat Bali.',
+                  style:
+                      blackTextStyle.copyWith(fontWeight: regular, height: 2.6),
+                ),
+              ],
+            ),
           )
         ]),
       );
