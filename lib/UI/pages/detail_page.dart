@@ -32,9 +32,74 @@ class DetailPage extends StatelessWidget {
               ])));
     }
 
+    Widget content() {
+      return Container(
+        width: double.infinity,
+        margin: EdgeInsets.only(left: defaultMargin, right: defaultMargin),
+        child: Column(children: [
+          // NOTE: Emblem
+          Container(
+            height: 24,
+            width: 108,
+            margin: const EdgeInsets.only(top: 60),
+            decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/icon_emblem.png'))),
+          ),
+
+          // NOTE: Title
+          Container(
+            margin: const EdgeInsets.only(top: 256),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Lake Ciliwung',
+                        style: whiteTextStyle.copyWith(
+                            fontSize: 24, fontWeight: semiBold),
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      Text(
+                        'Tangerang',
+                        style: whiteTextStyle.copyWith(
+                            fontSize: 16, fontWeight: light),
+                      )
+                    ],
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      width: 24,
+                      height: 24,
+                      decoration: const BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage('assets/icon_star.png'))),
+                    ),
+                    const SizedBox(
+                      width: 2,
+                    ),
+                    Text(
+                      "4.6",
+                      style: whiteTextStyle.copyWith(fontWeight: medium),
+                    )
+                  ],
+                ),
+              ],
+            ),
+          )
+        ]),
+      );
+    }
+
     return Scaffold(
       backgroundColor: kBackgroundColor,
-      body: Stack(children: [backgroundImage(), customShadow()]),
+      body: Stack(children: [backgroundImage(), customShadow(), content()]),
     );
   }
 }
