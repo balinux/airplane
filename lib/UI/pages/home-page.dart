@@ -1,4 +1,5 @@
 import 'package:airplane/UI/widgets/destination_card.dart';
+import 'package:airplane/UI/widgets/destination_tile.dart';
 import 'package:airplane/shared/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -46,6 +47,7 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    // popular destination
     Widget popularDestination() {
       return Container(
         margin: const EdgeInsets.only(top: 30),
@@ -89,8 +91,56 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    // destination tile
+    Widget newDestination() {
+      return Container(
+        margin: EdgeInsets.only(
+            top: 30, left: defaultMargin, right: defaultMargin, bottom: 100),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "New This Year",
+              style:
+                  blackTextStyle.copyWith(fontSize: 18, fontWeight: semiBold),
+            ),
+            const DestinationTile(
+              name: 'Danau Beratan',
+              city: 'Singajara',
+              imageUrl: 'assets/image_destination6.png',
+              rating: 4.6,
+            ),
+            const DestinationTile(
+              name: 'Sydney Opera',
+              city: 'Australia',
+              imageUrl: 'assets/image_destination7.png',
+              rating: 4.7,
+            ),
+            const DestinationTile(
+              name: 'Roma',
+              city: 'Italy',
+              imageUrl: 'assets/image_destination8.png',
+              rating: 4.8,
+            ),
+            const DestinationTile(
+              name: 'Payung Teduh',
+              city: 'Singapore',
+              imageUrl: 'assets/image_destination9.png',
+              rating: 4.9,
+            ),
+            const DestinationTile(
+              name: 'Hill Hey',
+              city: 'Monaco',
+              imageUrl: 'assets/image_destination10.png',
+              rating: 5.0,
+            ),
+          ],
+        ),
+      );
+    }
+
     return ListView(
-      children: [header(), popularDestination()],
+      children: [header(), popularDestination(), newDestination()],
     );
   }
 }
