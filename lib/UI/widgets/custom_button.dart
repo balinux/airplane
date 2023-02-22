@@ -27,7 +27,7 @@ class CustomButton extends StatelessWidget {
                   borderRadius: BorderRadius.circular(17))),
           onPressed: onPressed,
           child: Text(
-            'Get Started',
+            title,
             style: whiteTextStyle.copyWith(fontWeight: medium, fontSize: 18),
           )),
     );
