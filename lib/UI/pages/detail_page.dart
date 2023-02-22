@@ -1,4 +1,5 @@
 import 'package:airplane/UI/widgets/foto_item.dart';
+import 'package:airplane/UI/widgets/interest_item.dart';
 import 'package:airplane/shared/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -144,7 +145,42 @@ class DetailPage extends StatelessWidget {
                       imageUrl: 'assets/image_photo3.png',
                     ),
                   ],
-                )
+                ),
+                // NOTE: Interest
+                const SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  'Interest',
+                  style: blackTextStyle.copyWith(
+                      fontSize: 16, fontWeight: semiBold),
+                ),
+                const SizedBox(
+                  height: 6,
+                ),
+                Row(
+                  children: [
+                    InterestItem(
+                      title: 'Kids Park',
+                    ),
+                    InterestItem(
+                      title: 'Honor Bridge',
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  children: [
+                    InterestItem(
+                      title: 'City Museum',
+                    ),
+                    InterestItem(
+                      title: 'Central Mall',
+                    ),
+                  ],
+                ),
               ],
             ),
           )
@@ -154,7 +190,9 @@ class DetailPage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: kBackgroundColor,
-      body: Stack(children: [backgroundImage(), customShadow(), content()]),
+      body: SingleChildScrollView(
+          child:
+              Stack(children: [backgroundImage(), customShadow(), content()])),
     );
   }
 }
