@@ -1,3 +1,4 @@
+import 'package:airplane/UI/pages/succes_checkout_page.dart';
 import 'package:airplane/UI/widgets/booking_detail_item.dart';
 import 'package:airplane/UI/widgets/custom_button.dart';
 import 'package:airplane/shared/theme.dart';
@@ -239,15 +240,21 @@ class CehckOutPage extends StatelessWidget {
     Widget payNowButton() {
       return CustomButton(
         title: 'Pay Now',
-        onPressed: () {},
-        margin: EdgeInsets.only(top: 30),
+        onPressed: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const SuccessCheckoutPage(),
+              ));
+        },
+        margin: const EdgeInsets.only(top: 30),
       );
     }
 
     Widget tacButton() {
       return Container(
         alignment: Alignment.center,
-        margin: EdgeInsets.only(top: 30, bottom: 30),
+        margin: const EdgeInsets.only(top: 30, bottom: 30),
         child: Text(
           "Terms and Conditions",
           style: greyTextStyle.copyWith(
