@@ -1,7 +1,12 @@
 import 'package:airplane/UI/pages/home-page.dart';
+import 'package:airplane/UI/pages/settings_page.dart';
+import 'package:airplane/UI/pages/transaction_page.dart';
+import 'package:airplane/UI/pages/wallet_page.dart';
 import 'package:airplane/UI/widgets/custom_bottom_navigation_item.dart';
+import 'package:airplane/cubit/page_cubit.dart';
 import 'package:airplane/shared/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
@@ -23,17 +28,20 @@ class MainPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: const [
               CustomBottomNavigationItem(
+                index: 0,
                 imageUrl: 'assets/icon_home.png',
-                isSelected: true,
               ),
               CustomBottomNavigationItem(
                 imageUrl: 'assets/icon_booking.png',
+                index: 1,
               ),
               CustomBottomNavigationItem(
                 imageUrl: 'assets/icon_card.png',
+                index: 2,
               ),
               CustomBottomNavigationItem(
                 imageUrl: 'assets/icon_settings.png',
+                index: 3,
               ),
             ],
           ),
@@ -41,13 +49,29 @@ class MainPage extends StatelessWidget {
       );
     }
 
-    Widget buildContent() {
-      return HomePage();
+    Widget buildContent(int currentIndex) {
+      switch (currentIndex) {
+        case 0:
+          return const HomePage();
+        case 1:
+          return const TransactionPage();
+        case 2:
+          return const WalletPage();
+        case 3:
+          return const SettingsPage();
+        default:
+          return const HomePage();
+      }
     }
 
-    return Scaffold(
-      backgroundColor: kBackgroundColor,
-      body: Stack(children: [buildContent(), customButtonNavigation()]),
+    return BlocBuilder<PageCubit, int>(
+      builder: (context, currentIndex) {
+        return Scaffold(
+          backgroundColor: kBackgroundColor,
+          body: Stack(
+              children: [buildContent(currentIndex), customButtonNavigation()]),
+        );
+      },
     );
   }
 }
