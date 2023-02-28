@@ -6,7 +6,12 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class SignUpPage extends StatelessWidget {
-  const SignUpPage({super.key});
+  SignUpPage({super.key});
+
+  TextEditingController nameController = TextEditingController(text: '');
+  TextEditingController emailController = TextEditingController(text: '');
+  TextEditingController passwordController = TextEditingController(text: '');
+  TextEditingController hobbyController = TextEditingController(text: '');
 
   @override
   Widget build(BuildContext context) {
@@ -21,31 +26,35 @@ class SignUpPage extends StatelessWidget {
 
     Widget inputSection() {
       Widget nameInput() {
-        return const CustomTextFormField(
+        return CustomTextFormField(
           hintText: 'Your Full Name',
           title: 'Full Name',
+          controller: nameController,
         );
       }
 
       Widget emailInput() {
-        return const CustomTextFormField(
+        return CustomTextFormField(
           hintText: 'Your Email Address',
           title: 'Email',
+          controller: emailController,
         );
       }
 
       Widget passwordInput() {
-        return const CustomTextFormField(
+        return CustomTextFormField(
           hintText: 'Your Password',
           title: 'Password',
           obsecureText: true,
+          controller: passwordController,
         );
       }
 
       Widget hobbyInput() {
-        return const CustomTextFormField(
+        return CustomTextFormField(
           hintText: 'Your Hobby',
           title: 'Hobby',
+          controller: hobbyController,
         );
       }
 
