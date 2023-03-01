@@ -10,7 +10,7 @@ class UserService {
       _userReference.doc(user.id).set({
         'email': user.email,
         'name': user.name,
-        'hobby': user.balance,
+        'hobby': user.hobby,
         'balance': user.balance,
       });
     } catch (e) {
