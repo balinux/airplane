@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:airplane/UI/pages/get_started_page.dart';
 import 'package:airplane/shared/theme.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage extends StatefulWidget {
@@ -16,7 +17,19 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 2), () {
-      Navigator.pushNamed(context, '/get-started');
+      // pengecekan apakah ada user ayng sesuai dengan kredensial
+      User? user = FirebaseAuth.instance.currentUser;
+
+      if (user == null) {
+        // jika user sudah login
+        Navigator.pushNamedAndRemoveUntil(
+            context, '/get-started', (route) => false);
+      } else {
+        // jika user belum login
+        Navigator.pushNamedAndRemoveUntil(context, '/main', (route) => false);
+      }
+
+      // Navigator.pushNamedAndRemoveUntil(context, '/main', (route) => false);
     });
   }
 
