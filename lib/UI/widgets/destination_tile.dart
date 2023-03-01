@@ -1,19 +1,12 @@
 import 'package:airplane/UI/pages/detail_page.dart';
+import 'package:airplane/models/destination_model.dart';
 import 'package:airplane/shared/theme.dart';
 import 'package:flutter/material.dart';
 
 class DestinationTile extends StatelessWidget {
-  final String name;
-  final String city;
-  final String imageUrl;
-  final double rating;
+  final DestinationModel destionation;
 
-  const DestinationTile(
-      {super.key,
-      required this.name,
-      required this.city,
-      required this.imageUrl,
-      this.rating = 0.0});
+  const DestinationTile(this.destionation, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,19 +31,20 @@ class DestinationTile extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(18),
                     image: DecorationImage(
-                        fit: BoxFit.cover, image: AssetImage(imageUrl))),
+                        fit: BoxFit.cover,
+                        image: NetworkImage(destionation.imageUrl))),
               ),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      name,
+                      destionation.name,
                       style: blackTextStyle.copyWith(
                           fontSize: 18, fontWeight: medium),
                     ),
                     Text(
-                      city,
+                      destionation.city,
                       style: greyTextStyle.copyWith(fontWeight: light),
                     ),
                   ],
@@ -71,7 +65,7 @@ class DestinationTile extends StatelessWidget {
                     width: 2,
                   ),
                   Text(
-                    rating.toString(),
+                    destionation.rating.toString(),
                     style: blackTextStyle.copyWith(fontWeight: medium),
                   )
                 ],

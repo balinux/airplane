@@ -9,6 +9,8 @@ class DestinationCubit extends Cubit<DestinationState> {
   DestinationCubit() : super(DestinationInitial());
 
   void fetchDestination() async {
+    print('fetch destination');
+
     try {
       emit(DestinationLoading());
 
