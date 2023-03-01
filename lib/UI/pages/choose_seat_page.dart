@@ -134,9 +134,11 @@ class ChooseSeatPage extends StatelessWidget {
               children: [
                 SeatItem(
                   status: 1,
+                  id: 'A1',
                 ),
                 SeatItem(
                   status: 0,
+                  id: 'B1',
                 ),
                 Container(
                   width: 48,
@@ -149,9 +151,11 @@ class ChooseSeatPage extends StatelessWidget {
                 ),
                 SeatItem(
                   status: 2,
+                  id: 'C1',
                 ),
                 SeatItem(
                   status: 1,
+                  id: 'D1',
                 ),
               ],
             ),
@@ -165,9 +169,11 @@ class ChooseSeatPage extends StatelessWidget {
               children: [
                 SeatItem(
                   status: 2,
+                  id: 'A2',
                 ),
                 SeatItem(
                   status: 2,
+                  id: 'B2',
                 ),
                 Container(
                   width: 48,
@@ -180,9 +186,11 @@ class ChooseSeatPage extends StatelessWidget {
                 ),
                 SeatItem(
                   status: 0,
+                  id: 'C2',
                 ),
                 SeatItem(
                   status: 2,
+                  id: 'D2',
                 ),
               ],
             ),
@@ -195,9 +203,11 @@ class ChooseSeatPage extends StatelessWidget {
               children: [
                 SeatItem(
                   status: 1,
+                  id: 'C1',
                 ),
                 SeatItem(
                   status: 1,
+                  id: 'C2',
                 ),
                 Container(
                   width: 48,
@@ -210,9 +220,11 @@ class ChooseSeatPage extends StatelessWidget {
                 ),
                 SeatItem(
                   status: 0,
+                  id: 'C3',
                 ),
                 SeatItem(
                   status: 0,
+                  id: 'C4',
                 ),
               ],
             ),
@@ -226,9 +238,11 @@ class ChooseSeatPage extends StatelessWidget {
               children: [
                 SeatItem(
                   status: 0,
+                  id: 'D1',
                 ),
                 SeatItem(
                   status: 0,
+                  id: 'D2',
                 ),
                 Container(
                   width: 48,
@@ -241,9 +255,11 @@ class ChooseSeatPage extends StatelessWidget {
                 ),
                 SeatItem(
                   status: 2,
+                  id: 'D3',
                 ),
                 SeatItem(
                   status: 0,
+                  id: 'D4',
                 ),
               ],
             ),
@@ -257,9 +273,11 @@ class ChooseSeatPage extends StatelessWidget {
               children: [
                 SeatItem(
                   status: 0,
+                  id: 'E1',
                 ),
                 SeatItem(
                   status: 0,
+                  id: 'E2',
                 ),
                 Container(
                   width: 48,
@@ -272,9 +290,11 @@ class ChooseSeatPage extends StatelessWidget {
                 ),
                 SeatItem(
                   status: 2,
+                  id: 'E3',
                 ),
                 SeatItem(
                   status: 2,
+                  id: 'E4',
                 ),
               ],
             ),
