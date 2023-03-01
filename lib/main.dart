@@ -5,6 +5,7 @@ import 'package:airplane/UI/pages/sign_in_page.dart';
 import 'package:airplane/UI/pages/sign_up_page.dart';
 import 'package:airplane/UI/pages/splash_page.dart';
 import 'package:airplane/cubit/auth_cubit.dart';
+import 'package:airplane/cubit/destination_cubit.dart';
 import 'package:airplane/cubit/page_cubit.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -29,6 +30,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => AuthCubit(),
+        ),
+        BlocProvider(
+          create: (context) => DestinationCubit(),
         )
       ],
       child: MaterialApp(
