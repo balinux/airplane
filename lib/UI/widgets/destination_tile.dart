@@ -14,7 +14,7 @@ class DestinationTile extends StatelessWidget {
       onTap: () => Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const DetailPage(),
+            builder: (context) => DetailPage(destionation),
           )),
       child: Container(
         margin: const EdgeInsets.only(top: 16),
