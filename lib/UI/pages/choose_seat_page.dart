@@ -133,11 +133,10 @@ class ChooseSeatPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 SeatItem(
-                  status: 1,
                   id: 'A1',
+                  isAvailable: false,
                 ),
                 SeatItem(
-                  status: 0,
                   id: 'B1',
                 ),
                 Container(
@@ -150,11 +149,9 @@ class ChooseSeatPage extends StatelessWidget {
                   )),
                 ),
                 SeatItem(
-                  status: 2,
                   id: 'C1',
                 ),
                 SeatItem(
-                  status: 1,
                   id: 'D1',
                 ),
               ],
@@ -168,11 +165,9 @@ class ChooseSeatPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 SeatItem(
-                  status: 2,
                   id: 'A2',
                 ),
                 SeatItem(
-                  status: 2,
                   id: 'B2',
                 ),
                 Container(
@@ -185,11 +180,9 @@ class ChooseSeatPage extends StatelessWidget {
                   )),
                 ),
                 SeatItem(
-                  status: 0,
                   id: 'C2',
                 ),
                 SeatItem(
-                  status: 2,
                   id: 'D2',
                 ),
               ],
@@ -202,11 +195,9 @@ class ChooseSeatPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 SeatItem(
-                  status: 1,
                   id: 'C1',
                 ),
                 SeatItem(
-                  status: 1,
                   id: 'C2',
                 ),
                 Container(
@@ -219,11 +210,9 @@ class ChooseSeatPage extends StatelessWidget {
                   )),
                 ),
                 SeatItem(
-                  status: 0,
                   id: 'C3',
                 ),
                 SeatItem(
-                  status: 0,
                   id: 'C4',
                 ),
               ],
@@ -237,11 +226,9 @@ class ChooseSeatPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 SeatItem(
-                  status: 0,
                   id: 'D1',
                 ),
                 SeatItem(
-                  status: 0,
                   id: 'D2',
                 ),
                 Container(
@@ -254,11 +241,9 @@ class ChooseSeatPage extends StatelessWidget {
                   )),
                 ),
                 SeatItem(
-                  status: 2,
                   id: 'D3',
                 ),
                 SeatItem(
-                  status: 0,
                   id: 'D4',
                 ),
               ],
@@ -272,11 +257,9 @@ class ChooseSeatPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 SeatItem(
-                  status: 0,
                   id: 'E1',
                 ),
                 SeatItem(
-                  status: 0,
                   id: 'E2',
                 ),
                 Container(
@@ -289,11 +272,9 @@ class ChooseSeatPage extends StatelessWidget {
                   )),
                 ),
                 SeatItem(
-                  status: 2,
                   id: 'E3',
                 ),
                 SeatItem(
-                  status: 2,
                   id: 'E4',
                 ),
               ],
