@@ -12,7 +12,7 @@ class SeatCubit extends Cubit<List<String>> {
       state.remove(id);
     }
     print('new state: $state');
-    emit(state);
+    emit(List.from(state));
   }
 
 // mengecek apakah index id -1(data tidak ada) namun jika selain -1 maka data ada
