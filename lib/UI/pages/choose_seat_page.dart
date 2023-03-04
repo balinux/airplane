@@ -361,7 +361,8 @@ class ChooseSeatPage extends StatelessWidget {
                         insurance: true,
                         refunable: false,
                         price: destination.price * state.length,
-                        grandTotal: price + (price * 0.45).toInt())),
+                        grandTotal: price + (price * 0.45).toInt(),
+                        vat: 0.45)),
                   ));
             },
             margin: const EdgeInsets.only(top: 30, bottom: 46),
