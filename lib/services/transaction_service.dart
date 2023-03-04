@@ -4,7 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class TransactionService {
   CollectionReference _transactionReference =
-      FirebaseFirestore.instance.collection('transactions ');
+      FirebaseFirestore.instance.collection('transactions');
 
   Future<void> createTransaction(TransactionModel transaction) async {
     try {
