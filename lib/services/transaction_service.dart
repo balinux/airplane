@@ -13,7 +13,7 @@ class TransactionService {
         'amountOfTraveler': transaction.amountOfTraveler,
         'selectedSeats': transaction.selectedSeats,
         'insurance': transaction.insurance,
-        'refunable': transaction.refunable,
+        'refundable': transaction.refundable,
         'vat': transaction.vat,
         'price': transaction.price,
         'grandTotal': transaction.grandTotal,
@@ -25,6 +25,7 @@ class TransactionService {
 
   Future<List<TransactionModel>> fetchTransactions() async {
     try {
+      print('Fetct transaction');
       QuerySnapshot result = await _transactionReference.get();
 
       List<TransactionModel> transactions = result.docs.map((e) {

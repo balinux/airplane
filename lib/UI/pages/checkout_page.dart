@@ -152,8 +152,8 @@ class CehckOutPage extends StatelessWidget {
           ),
           BookingDetailItem(
             title: 'Refundable',
-            valueColor: transaction.refunable ? kGreenColor : kRedColor,
-            valueText: transaction.refunable ? 'YES' : 'NO',
+            valueColor: transaction.refundable ? kGreenColor : kRedColor,
+            valueText: transaction.refundable ? 'YES' : 'NO',
           ),
           BookingDetailItem(
             title: 'VAT',
